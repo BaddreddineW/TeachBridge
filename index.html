@@ -50,11 +50,11 @@ section {
   max-width: 1100px;
   margin: auto;
   padding: 4.5rem 2rem;
-  animation: fadeUp 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: fadeUp 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(36px); }
+  from { opacity: 0; transform: translateY(40px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
@@ -63,14 +63,28 @@ h1, h2, h3 { margin-bottom: 1rem; }
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.8rem;
+  gap: 2rem;
 }
 
+/* 🔥 CARD STYLING UPGRADE */
 .card {
-  background: var(--card);
+  background: linear-gradient(180deg, #0f172a, #0b1224);
   padding: 2rem;
-  border-radius: 18px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+  border-radius: 20px;
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.35),
+    inset 0 1px 0 rgba(255,255,255,0.03);
+  transition:
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ✨ HOVER EFFECT */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 18px 45px rgba(0,0,0,0.55),
+    0 0 0 1px rgba(56,189,248,0.08);
 }
 
 .btn {
@@ -80,9 +94,14 @@ h1, h2, h3 { margin-bottom: 1rem; }
   background: var(--accent);
   color: #020617;
   text-decoration: none;
-  border-radius: 12px;
+  border-radius: 14px;
   font-weight: 600;
   text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
 }
 
 .btn.alt {
@@ -105,7 +124,6 @@ footer {
   <div class="site-name">TeachBridge</div>
 </header>
 
-<!-- HOME -->
 <section>
   <h1>Welcome to TeachBridge</h1>
   <p>
@@ -147,28 +165,20 @@ footer {
   </div>
 </section>
 
-<!-- TEACHERS -->
 <section id="teachers">
   <h2>Teachers in the Field</h2>
   <div class="card">
-    <p>
-      All classroom-ready resources I share, collected in one place
-      and updated whenever new useful materials are found.
-    </p>
+    <p>All classroom-ready resources I share, collected in one place.</p>
     <a class="btn" href="PASTE_GOOGLE_DRIVE_LINK_HERE" target="_blank">
       Open Google Drive Folder
     </a>
   </div>
 </section>
 
-<!-- TRAINEES -->
 <section id="trainees">
   <h2>Teacher Trainees</h2>
   <div class="card">
-    <p>
-      Materials to help you navigate your way through the training year,
-      with ongoing updates throughout the year.
-    </p>
+    <p>Materials to help you navigate your way through the training year.</p>
     <a class="btn"
        href="https://drive.google.com/drive/folders/11vmAxFzE78JsXa26gfUQPsY6ssY4PwOx"
        target="_blank">
@@ -177,21 +187,16 @@ footer {
   </div>
 </section>
 
-<!-- APPLICANTS -->
 <section id="applicants">
   <h2>Teaching Applicants</h2>
   <div class="card">
-    <p>
-      All relevant files for exams and interviews,
-      updated whenever new useful documents are available.
-    </p>
+    <p>All relevant files for exams and interviews.</p>
     <a class="btn" href="PASTE_GOOGLE_DRIVE_LINK_HERE" target="_blank">
       Open Google Drive Folder
     </a>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <h2>Contact</h2>
   <p>
@@ -202,36 +207,25 @@ footer {
   <div class="grid" style="margin-top:2rem;">
     <div class="card">
       <h3>Instagram</h3>
-      <a class="btn"
-         href="https://www.instagram.com/gha_badr"
-         target="_blank">
+      <a class="btn" href="https://www.instagram.com/gha_badr" target="_blank">
         Visit Instagram
       </a>
     </div>
 
     <div class="card">
       <h3>WhatsApp</h3>
-      <a class="btn alt"
-         href="https://wa.me/qr/KRRN6VSYFKPHJ1"
-         target="_blank">
+      <a class="btn alt" href="https://wa.me/qr/KRRN6VSYFKPHJ1" target="_blank">
         Chat on WhatsApp
       </a>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
 <section>
   <h2>About</h2>
   <p>
     TeachBridge serves as a central sachet where all the files I share
-    are brought together in one place. The website and its linked resources
-    are actively maintained and updated whenever I find materials that may
-    be useful to teachers, teacher trainees, or those applying to teaching.
-  </p>
-  <p style="margin-top:1rem;">
-    If you need anything beyond what is shared here,
-    you can always contact me via Instagram or WhatsApp.
+    are brought together in one place and updated regularly.
   </p>
 </section>
 
