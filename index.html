@@ -53,7 +53,7 @@ section {
   max-width: 1100px;
   margin: auto;
   padding: 5rem 2rem;
-  scroll-margin-top: 120px; /* 👈 ensures smooth landing */
+  scroll-margin-top: 120px;
   animation: fadeUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
@@ -116,6 +116,24 @@ footer {
   padding: 3rem;
   color: var(--muted);
 }
+
+/* 🖥 PC OPTIMIZATION: Center Contact Section Information */
+@media screen and (min-width: 1024px) {
+  #contact {
+    text-align: center;
+  }
+  
+  #contact .grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  #contact .card {
+    width: 350px; /* Fixed width for a balanced look on desktop */
+  }
+}
 </style>
 </head>
 
@@ -125,16 +143,16 @@ footer {
   <div class="site-name">TeachBridge</div>
 </header>
 
-<!-- HOME / OVERVIEW -->
 <section>
   <h1>Welcome to TeachBridge</h1>
   <p>
     TeachBridge is a central sachet where all the relevant files I share
     are gathered in one place. All linked Google Drive folders are
     actively updated whenever I find something useful for any target audience.
+    <strong>Please note that the "Teachers in the Field" section will be available when it's ready; 
+    for now, the other two sections are ready and will keep receiving updates.</strong>
   </p>
 
-  <!-- 🔹 OVERVIEW CARDS (EXPLORE) -->
   <div class="grid" style="margin-top:3.5rem;">
     <div class="card">
       <h3>Teachers in the Field</h3>
@@ -162,16 +180,14 @@ footer {
   </div>
 </section>
 
-<!-- 🔹 REAL GOOGLE DRIVE SECTIONS -->
-
 <section id="teachers">
   <h2>Teachers in the Field</h2>
   <div class="card">
     <p>
       Classroom-ready resources collected in one place and updated regularly.
     </p>
-    <a class="btn" href="PASTE_GOOGLE_DRIVE_LINK_HERE" target="_blank">
-      Open Google Drive Folder
+    <a class="btn" href="#" style="opacity: 0.6; cursor: not-allowed;">
+      Coming Soon
     </a>
   </div>
 </section>
@@ -196,7 +212,9 @@ footer {
     <p>
       Files and documents to support exam and interview preparation.
     </p>
-    <a class="btn" href="PASTE_GOOGLE_DRIVE_LINK_HERE" target="_blank">
+    <a class="btn" 
+       href="https://drive.google.com/drive/folders/10m_oL1VmLnIKvHHi5ZG9YiR9wxqqvr_p?usp=drive_link" 
+       target="_blank">
       Open Google Drive Folder
     </a>
   </div>
@@ -208,7 +226,7 @@ footer {
     For further inquiries or quick communication, reach out on Instagram or WhatsApp.
   </p>
 
-  <div class="grid" style="margin-top:2.5rem;">
+  <div class="grid">
     <div class="card">
       <h3>Instagram</h3>
       <a class="btn instagram" href="https://www.instagram.com/gha_badr" target="_blank">
