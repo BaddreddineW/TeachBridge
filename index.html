@@ -117,7 +117,6 @@ footer {
   color: var(--muted);
 }
 
-/* 🖥 PC OPTIMIZATION: Center Contact Section Information */
 @media screen and (min-width: 1024px) {
   #contact {
     text-align: center;
@@ -183,24 +182,16 @@ footer {
 <section id="teachers">
   <h2>Teachers in the Field</h2>
   <div class="card">
-    <p>
-      Classroom-ready resources collected in one place and updated regularly.
-    </p>
-    <a class="btn" href="#" style="opacity: 0.6; cursor: not-allowed;">
-      Coming Soon
-    </a>
+    <p>Classroom-ready resources collected in one place and updated regularly.</p>
+    <a class="btn" href="#" style="opacity:0.6;cursor:not-allowed;">Coming Soon</a>
   </div>
 </section>
 
 <section id="trainees">
   <h2>Teacher Trainees</h2>
   <div class="card">
-    <p>
-      Materials to help you navigate your way through the training year.
-    </p>
-    <a class="btn"
-       href="https://drive.google.com/drive/folders/11vmAxFzE78JsXa26gfUQPsY6ssY4PwOx"
-       target="_blank">
+    <p>Materials to help you navigate your way through the training year.</p>
+    <a class="btn" href="https://drive.google.com/drive/folders/11vmAxFzE78JsXa26gfUQPsY6ssY4PwOx" target="_blank">
       Open Google Drive Folder
     </a>
   </div>
@@ -209,12 +200,8 @@ footer {
 <section id="applicants">
   <h2>Teaching Applicants</h2>
   <div class="card">
-    <p>
-      Files and documents to support exam and interview preparation.
-    </p>
-    <a class="btn" 
-       href="https://drive.google.com/drive/folders/10m_oL1VmLnIKvHHi5ZG9YiR9wxqqvr_p?usp=sharing" 
-       target="_blank">
+    <p>Files and documents to support exam and interview preparation.</p>
+    <a class="btn" href="https://drive.google.com/drive/folders/10m_oL1VmLnIKvHHi5ZG9YiR9wxqqvr_p?usp=sharing" target="_blank">
       Open Google Drive Folder
     </a>
   </div>
@@ -222,23 +209,17 @@ footer {
 
 <section id="contact">
   <h2>Contact</h2>
-  <p>
-    For further inquiries or quick communication, reach out on Instagram or WhatsApp.
-  </p>
+  <p>For further inquiries or quick communication, reach out on Instagram or WhatsApp.</p>
 
   <div class="grid">
     <div class="card">
       <h3>Instagram</h3>
-      <a class="btn instagram" href="https://www.instagram.com/gha_badr" target="_blank">
-        Visit Instagram
-      </a>
+      <a class="btn instagram" href="https://www.instagram.com/gha_badr" target="_blank">Visit Instagram</a>
     </div>
 
     <div class="card">
       <h3>WhatsApp</h3>
-      <a class="btn whatsapp" href="https://wa.me/qr/KRRN6VSYFKPHJ1" target="_blank">
-        Chat on WhatsApp
-      </a>
+      <a class="btn whatsapp" href="https://wa.me/qr/KRRN6VSYFKPHJ1" target="_blank">Chat on WhatsApp</a>
     </div>
   </div>
 </section>
@@ -246,6 +227,16 @@ footer {
 <footer>
   <p>© 2026 – TeachBridge</p>
 </footer>
+
+<!-- 🔧 Refresh Optimization -->
+<script>
+  window.addEventListener("load", () => {
+    if (window.location.hash) {
+      history.replaceState(null, "", window.location.pathname);
+      window.scrollTo(0, 0);
+    }
+  });
+</script>
 
 </body>
 </html>
